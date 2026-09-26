@@ -62,6 +62,20 @@ Cari alamat IPv4 LAN komputer (Linux):
 hostname -I
 ```
 
+Di Windows, jalankan perintah berikut pada Command Prompt atau PowerShell, lalu cari `IPv4 Address` pada adaptor Wi-Fi atau Ethernet yang sedang digunakan:
+
+```powershell
+ipconfig
+```
+
+Di macOS, untuk melihat alamat IPv4 Wi-Fi:
+
+```bash
+ipconfig getifaddr en0
+```
+
+Jika perintah macOS tidak menampilkan alamat, antarmuka Wi-Fi mungkin menggunakan nama lain. Periksa nama antarmuka dengan `networksetup -listallhardwareports`, lalu ganti `en0` sesuai nama perangkat Wi-Fi.
+
 Pilih alamat jaringan Wi-Fi/LAN yang sama dengan HP, bukan `127.0.0.1` atau alamat loopback lainnya. Alamat IP bisa berubah ketika komputer tersambung ulang ke jaringan.
 
 ## 3. Jalankan Frontend di HP
